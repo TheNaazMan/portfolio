@@ -1,7 +1,7 @@
 <style>
   :root {
-    --ink: #0d0d0d;
-    --paper: #f5f0e8;
+    --ink: #f5f0e8;
+    --paper: #0a0a0a;
     --lime: #c8f135;
     --coral: #ff5c3a;
     --sky: #38c5f5;
@@ -51,7 +51,7 @@
     z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
     padding: 1.4rem 3rem;
-    mix-blend-mode: multiply;
+    mix-blend-mode: normal;
   }
   .nav-logo {
     font-family: 'Syne', sans-serif;
@@ -257,19 +257,38 @@
     border: 1.5px solid var(--ink);
   }
   .service-card {
-    background: var(--paper);
-    padding: 2.5rem 2rem;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.35s ease;
-    cursor: default;
-  }
-  .service-card:hover { background: var(--ink); color: var(--paper); }
-  .service-card:hover .service-icon { background: var(--paper); }
-  .service-card:hover .service-icon svg { stroke: var(--ink); }
-  .service-card:hover .service-num { color: var(--paper); opacity: 0.08; }
-  .service-card:hover .service-arrow { opacity: 1; transform: translate(0,0); }
+  background: #111; /* slightly lighter than black */
+  color: var(--ink);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  cursor: default;
+  border: 1px solid #1f1f1f; /* subtle separation */
+}
 
+.service-card:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.service-card:hover .service-icon {
+  background: var(--paper);
+}
+
+.service-card:hover .service-icon svg {
+  stroke: var(--ink);
+}
+
+.service-card:hover .service-num {
+  color: var(--paper);
+  opacity: 0.08;
+}
+
+.service-card:hover .service-arrow {
+  opacity: 1;
+  transform: translate(0,0);
+}
   .service-icon {
     width: 48px; height: 48px;
     background: var(--ink);
